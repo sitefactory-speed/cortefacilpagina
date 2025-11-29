@@ -134,6 +134,10 @@
                 if(video) video.scrollIntoView({ behavior: 'smooth' });
             };
 
+            const handleCheckout = () => {
+                window.location.href = "https://pay.kiwify.com.br/20NUPfu";
+            };
+
             return (
                 <div className="min-h-screen font-sans selection:bg-blue-500 selection:text-white overflow-x-hidden">
                 
@@ -169,7 +173,7 @@
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
                             <PrimaryButton 
                                 text="COMEÇAR AGORA" 
-                                subtext="R$79/mês - Plano Especial"
+                                subtext="R$97,90/mês - Plano Especial"
                                 onClick={scrollToPricing}
                                 pulse={true}
                                 className="w-full sm:w-auto min-w-[250px]"
@@ -194,7 +198,7 @@
                                 <Icons.Smartphone size={18} className="text-green-500" /> WhatsApp Integrado
                             </div>
                             <div className="flex items-center justify-center gap-2 col-span-2 md:col-span-1">
-                                <Icons.Layout size={18} className="text-purple-500" /> Página Profissional
+                                <Icons.Layout size={18} className="text-purple-500" /> Link Personalizado
                             </div>
                         </div>
                     </div>
@@ -218,8 +222,8 @@
                                     <Icons.MessageCircle />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white">Confirmação WhatsApp</h3>
-                                    <p className="text-sm text-gray-400">Lembretes automáticos para não perder horário</p>
+                                    <h3 className="font-bold text-white">Notificação Imediata</h3>
+                                    <p className="text-sm text-gray-400">Você recebe o aviso do agendamento na hora</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-900 border border-gray-800 shadow-sm">
@@ -227,8 +231,8 @@
                                     <Icons.Scissors />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white">Perfil Profissional</h3>
-                                    <p className="text-sm text-gray-400">Site próprio da sua barbearia incluso</p>
+                                    <h3 className="font-bold text-white">Link Exclusivo</h3>
+                                    <p className="text-sm text-gray-400">Seu perfil de agendamento personalizado</p>
                                 </div>
                             </div>
                         </div>
@@ -339,8 +343,8 @@
 
                             {/* Feature - WhatsApp */}
                             <div className="md:col-span-4 bg-gray-900 rounded-3xl p-8 border border-gray-800 relative group">
-                                <h3 className="text-xl font-bold mb-2 flex items-center gap-2"><Icons.Zap size={20} className="text-yellow-500"/> Confirmação Rápida</h3>
-                                <p className="text-gray-400 text-sm">Mensagens automáticas para reduzir faltas.</p>
+                                <h3 className="text-xl font-bold mb-2 flex items-center gap-2"><Icons.Zap size={20} className="text-yellow-500"/> Notificações</h3>
+                                <p className="text-gray-400 text-sm">Saiba exatamente quem agendou e quando.</p>
                             </div>
 
                             {/* Feature - Calendar */}
@@ -381,7 +385,7 @@
                             Quando o cliente agenda, você recebe <span className="text-green-500">tudo certinho no WhatsApp.</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-8">
-                            Sem confusão. O sistema envia os detalhes do agendamento, valor e serviço diretamente para você e confirma com o cliente.
+                            Sem confusão. O sistema envia os detalhes do agendamento, valor e serviço diretamente para você.
                         </p>
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-300">
@@ -391,7 +395,7 @@
                                 <Icons.Check className="text-blue-500" size={20} /> Nome, Data e Serviço detalhados
                             </li>
                             <li className="flex items-center gap-3 text-gray-300">
-                                <Icons.Check className="text-blue-500" size={20} /> Link para cancelamento se necessário
+                                <Icons.Check className="text-blue-500" size={20} /> Gerencie ou cancele pelo painel
                             </li>
                         </ul>
                     </div>
@@ -400,9 +404,9 @@
                         {/* Mockup Phone */}
                         <div className="mx-auto max-w-[320px] bg-gray-900 border-[8px] border-gray-800 rounded-[3rem] shadow-2xl overflow-hidden relative">
                             <div className="bg-[#075E54] p-4 flex items-center gap-3 text-white">
-                                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs">CF</div>
+                                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs">VC</div>
                                 <div>
-                                <p className="text-sm font-bold">CorteFácil Bot</p>
+                                <p className="text-sm font-bold">Seu WhatsApp</p>
                                 <p className="text-[10px] opacity-80">Online</p>
                                 </div>
                             </div>
@@ -423,7 +427,7 @@
 
                                 {/* Mensagem 2 */}
                                 <div className="self-end bg-[#005c4b] text-white p-3 rounded-lg rounded-tr-none max-w-[85%] text-sm shadow-sm relative">
-                                    <p>Show! Agenda bloqueada ✅</p>
+                                    <p>AGENDAMENTO CONFIRMADO ✅</p>
                                     <span className="text-[10px] text-gray-300 absolute bottom-1 right-2 flex items-center gap-1">10:06 <span className="text-blue-300">✓✓</span></span>
                                 </div>
                             </div>
@@ -440,7 +444,7 @@
                             <p className="text-gray-400">Desenvolvido pensando na sua rotina.</p>
                         </div>
                         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <FeatureCard icon={Icons.Layout} title="Página Profissional" description="Sua marca na internet com design premium." />
+                            <FeatureCard icon={Icons.Layout} title="Link Personalizado" description="Sua marca na internet com design premium." />
                             <FeatureCard icon={Icons.Calendar} title="Agenda Automática" description="Sem conflito de horários." />
                             <FeatureCard icon={Icons.Users} title="Gestão de Clientes" description="Histórico de cortes e frequência." />
                             <FeatureCard icon={Icons.Smartphone} title="Responsivo" description="Funciona perfeito no celular e PC." />
@@ -494,7 +498,7 @@
                                 <div className="my-4"><span className="text-3xl font-bold">R$349</span><span className="text-sm text-gray-500">/mês</span></div>
                                 <ul className="space-y-3 text-sm text-gray-400 mb-8">
                                     <li className="flex gap-2"><Icons.Check size={16} /> Tudo do Pro</li>
-                                    <li className="flex gap-2"><Icons.Check size={16} /> Página Personalizada Premium</li>
+                                    <li className="flex gap-2"><Icons.Check size={16} /> Link Personalizado com Logo</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> Múltiplos usuários</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> Suporte Prioritário</li>
                                 </ul>
@@ -511,7 +515,7 @@
                                 
                                 <div className="my-6">
                                     <span className="text-sm text-gray-500 line-through mr-2">R$149</span>
-                                    <span className="text-5xl font-extrabold text-blue-500">R$79</span>
+                                    <span className="text-5xl font-extrabold text-blue-500">R$97,90</span>
                                     <span className="text-sm text-gray-400">/mês</span>
                                 </div>
 
@@ -540,9 +544,9 @@
 
                                 <PrimaryButton 
                                     text="QUERO COMEÇAR" 
-                                    subtext="R$79/mês"
+                                    subtext="R$97,90/mês"
                                     className="w-full text-sm"
-                                    onClick={() => {}}
+                                    onClick={handleCheckout}
                                     pulse={true}
                                 />
                                 <p className="text-center text-xs text-gray-500 mt-4">Sem fidelidade. Cancele quando quiser.</p>
@@ -611,17 +615,23 @@
                 {/* 12. BOTÕES FLUTUANTES */}
                 <div className="fixed bottom-4 right-4 z-50">
                     <button 
-                    onClick={scrollToPricing}
+                    onClick={handleCheckout}
                     className="bg-blue-600 text-white font-bold py-3 px-6 rounded-full shadow-[0_0_20px_rgba(37,99,235,0.6)] hover:scale-105 transition-transform flex items-center gap-2 animate-bounce-slow"
                     >
-                    Assinar <span className="bg-blue-800 px-2 py-0.5 rounded text-xs">R$79</span>
+                    Assinar <span className="bg-blue-800 px-2 py-0.5 rounded text-xs">R$97,90</span>
                     </button>
                 </div>
 
                 <div className="fixed bottom-4 left-4 z-50">
-                    <button className="bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform">
+                    <a 
+                        href="https://wa.me/5586994843759?text=Ol%C3%A1!%20Vim%20pelo%20link%20da%20p%C3%A1gina%20do%20produto.%20CORTE%20FACIL"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-[#25D366] text-white p-3 rounded-full shadow-lg hover:scale-110 transition-transform flex items-center justify-center"
+                        aria-label="Falar no WhatsApp"
+                    >
                         <Icons.MessageCircle size={28} />
-                    </button>
+                    </a>
                 </div>
                 </div>
             );
