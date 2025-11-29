@@ -192,13 +192,13 @@
 
                         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm text-gray-500 font-medium justify-center max-w-2xl mx-auto border-t border-gray-900 pt-8">
                             <div className="flex items-center justify-center gap-2">
-                                <Icons.Calendar size={18} className="text-blue-500" /> Agenda Automática
+                                <Icons.Calendar size={18} className="text-blue-500" /> Escolha no Link
                             </div>
                             <div className="flex items-center justify-center gap-2">
-                                <Icons.Smartphone size={18} className="text-green-500" /> WhatsApp Integrado
+                                <Icons.Smartphone size={18} className="text-green-500" /> Finaliza no WhatsApp
                             </div>
                             <div className="flex items-center justify-center gap-2 col-span-2 md:col-span-1">
-                                <Icons.Layout size={18} className="text-purple-500" /> Link Personalizado
+                                <Icons.Layout size={18} className="text-purple-500" /> Painel de Gestão
                             </div>
                         </div>
                     </div>
@@ -213,8 +213,8 @@
                                     <Icons.Clock />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white">Agenda 24h</h3>
-                                    <p className="text-sm text-gray-400">Seu cliente agenda enquanto você dorme</p>
+                                    <h3 className="font-bold text-white">Escolha Rápida</h3>
+                                    <p className="text-sm text-gray-400">Cliente escolhe horários livres no link</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-900 border border-gray-800 shadow-sm">
@@ -222,17 +222,17 @@
                                     <Icons.MessageCircle />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white">Notificação Imediata</h3>
-                                    <p className="text-sm text-gray-400">Você recebe o aviso do agendamento na hora</p>
+                                    <h3 className="font-bold text-white">Agendamento no Zap</h3>
+                                    <p className="text-sm text-gray-400">Cliente é redirecionado já com o pedido pronto</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 p-4 rounded-xl bg-gray-900 border border-gray-800 shadow-sm">
                                 <div className="h-12 w-12 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400">
-                                    <Icons.Scissors />
+                                    <Icons.Layout />
                                 </div>
                                 <div>
-                                    <h3 className="font-bold text-white">Link Exclusivo</h3>
-                                    <p className="text-sm text-gray-400">Seu perfil de agendamento personalizado</p>
+                                    <h3 className="font-bold text-white">Painel de Controle</h3>
+                                    <p className="text-sm text-gray-400">Confirme o agendamento com um clique</p>
                                 </div>
                             </div>
                         </div>
@@ -254,10 +254,10 @@
                         <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
                             <div className="space-y-6">
                                 {[
-                                    "Clientes desistem por falta de resposta rápida no WhatsApp",
+                                    "Clientes desistem por demorar a responder no WhatsApp",
                                     "Agenda de papel ou bloco de notas vira uma bagunça",
-                                    "Furos na agenda (no-show) por falta de lembrete",
-                                    "Perda de tempo negociando horários ao invés de cortar",
+                                    "Furos na agenda (no-show) por falta de confirmação",
+                                    "Perda de tempo digitando horários disponíveis toda hora",
                                     "Falta de profissionalismo afasta clientes de ticket alto"
                                 ].map((item, idx) => (
                                     <div key={idx} className="flex items-start gap-4 p-4 rounded-lg bg-red-500/5 border border-red-500/10">
@@ -305,7 +305,7 @@
                                     <Icons.Layout size={120} />
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2">Painel Administrativo Completo</h3>
-                                <p className="text-gray-400 mb-8">Controle total do faturamento e atendimentos em uma tela.</p>
+                                <p className="text-gray-400 mb-8">O agendamento aparece aqui. Você clica e confirma com o cliente.</p>
                                 
                                 {/* Mockup UI */}
                                 <div className="bg-[#111] rounded-t-xl border border-gray-800 p-4 shadow-xl">
@@ -325,7 +325,7 @@
                             <div className="md:col-span-4 bg-blue-600 rounded-3xl p-8 border border-blue-500 shadow-2xl text-white relative overflow-hidden">
                                 <div className="relative z-10">
                                     <h3 className="text-2xl font-bold mb-2">Seu Link de Agendamento</h3>
-                                    <p className="text-blue-100 mb-6">O cliente clica, escolhe e agenda. Simples.</p>
+                                    <p className="text-blue-100 mb-6">O cliente clica, escolhe e o sistema monta a mensagem pro WhatsApp.</p>
                                     <div className="bg-white text-gray-900 rounded-lg p-3 text-center font-bold text-sm shadow-lg transform rotate-[-2deg]">
                                         corte.facil/suabarbearia
                                     </div>
@@ -343,8 +343,8 @@
 
                             {/* Feature - WhatsApp */}
                             <div className="md:col-span-4 bg-gray-900 rounded-3xl p-8 border border-gray-800 relative group">
-                                <h3 className="text-xl font-bold mb-2 flex items-center gap-2"><Icons.Zap size={20} className="text-yellow-500"/> Notificações</h3>
-                                <p className="text-gray-400 text-sm">Saiba exatamente quem agendou e quando.</p>
+                                <h3 className="text-xl font-bold mb-2 flex items-center gap-2"><Icons.Zap size={20} className="text-yellow-500"/> Pedido no Zap</h3>
+                                <p className="text-gray-400 text-sm">O cliente já chega com serviço e horário definidos.</p>
                             </div>
 
                             {/* Feature - Calendar */}
@@ -382,20 +382,20 @@
                     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
                     <div>
                         <h2 className="text-4xl font-bold mb-6">
-                            Quando o cliente agenda, você recebe <span className="text-green-500">tudo certinho no WhatsApp.</span>
+                            O cliente agenda e <span className="text-green-500">te manda tudo pronto no WhatsApp.</span>
                         </h2>
                         <p className="text-gray-400 text-lg mb-8">
-                            Sem confusão. O sistema envia os detalhes do agendamento, valor e serviço diretamente para você.
+                            Chega de ficar perguntando "que horas você quer?". O cliente escolhe no sistema e só te manda a confirmação para você aprovar. O agendamento também cai direto no seu painel.
                         </p>
                         <ul className="space-y-4">
                             <li className="flex items-center gap-3 text-gray-300">
-                                <Icons.Check className="text-blue-500" size={20} /> Notificação imediata
+                                <Icons.Check className="text-blue-500" size={20} /> Cliente escolhe o horário livre
                             </li>
                             <li className="flex items-center gap-3 text-gray-300">
-                                <Icons.Check className="text-blue-500" size={20} /> Nome, Data e Serviço detalhados
+                                <Icons.Check className="text-blue-500" size={20} /> Sistema gera a mensagem automática
                             </li>
                             <li className="flex items-center gap-3 text-gray-300">
-                                <Icons.Check className="text-blue-500" size={20} /> Gerencie ou cancele pelo painel
+                                <Icons.Check className="text-blue-500" size={20} /> Você recebe e confirma na hora
                             </li>
                         </ul>
                     </div>
@@ -404,10 +404,10 @@
                         {/* Mockup Phone */}
                         <div className="mx-auto max-w-[320px] bg-gray-900 border-[8px] border-gray-800 rounded-[3rem] shadow-2xl overflow-hidden relative">
                             <div className="bg-[#075E54] p-4 flex items-center gap-3 text-white">
-                                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs">VC</div>
+                                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-xs">RS</div>
                                 <div>
-                                <p className="text-sm font-bold">Seu WhatsApp</p>
-                                <p className="text-[10px] opacity-80">Online</p>
+                                <p className="text-sm font-bold">Ricardo Silva</p>
+                                <p className="text-[10px] opacity-80">Visto por último hoje...</p>
                                 </div>
                             </div>
                             
@@ -415,19 +415,18 @@
                                 backgroundImage: 'radial-gradient(#1f2c34 1px, transparent 1px)',
                                 backgroundSize: '20px 20px'
                             }}>
-                                {/* Mensagem 1 */}
+                                {/* Mensagem 1 - Enviada pelo cliente (esquerda) */}
                                 <div className="self-start bg-[#1f2c34] text-white p-3 rounded-lg rounded-tl-none max-w-[85%] text-sm shadow-sm relative border border-gray-800/50">
-                                    <p className="font-bold text-blue-400 text-xs mb-1">Novo Agendamento! ✂️</p>
-                                    <p>Cliente: <strong>Ricardo Silva</strong></p>
-                                    <p>Serviço: <strong>Corte + Barba</strong></p>
-                                    <p>Data: <strong>Hoje, 15:30</strong></p>
-                                    <p>Valor: <strong>R$ 60,00</strong></p>
+                                    <p className="text-gray-300 text-xs mb-1">Olá, quero confirmar meu agendamento:</p>
+                                    <p><strong>Serviço:</strong> Corte + Barba</p>
+                                    <p><strong>Data:</strong> Hoje, 15:30</p>
+                                    <p><strong>Valor:</strong> R$ 60,00</p>
                                     <span className="text-[10px] text-gray-400 absolute bottom-1 right-2">10:05</span>
                                 </div>
 
-                                {/* Mensagem 2 */}
+                                {/* Mensagem 2 - Resposta do Barbeiro (direita) */}
                                 <div className="self-end bg-[#005c4b] text-white p-3 rounded-lg rounded-tr-none max-w-[85%] text-sm shadow-sm relative">
-                                    <p>AGENDAMENTO CONFIRMADO ✅</p>
+                                    <p>Opa Ricardo! Tudo certo. Confirmado aqui no painel. Te aguardo! 👊</p>
                                     <span className="text-[10px] text-gray-300 absolute bottom-1 right-2 flex items-center gap-1">10:06 <span className="text-blue-300">✓✓</span></span>
                                 </div>
                             </div>
@@ -474,7 +473,7 @@
                                     <li className="flex gap-2"><Icons.Check size={16} /> Link de agendamento</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> Painel básico</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> WhatsApp simples</li>
-                                    <li className="flex gap-2"><Icons.Check size={16} /> 1 Usuário</li>
+                                    <li className="flex gap-2"><Icons.Check size={16} /> 1 Barbeiro</li>
                                 </ul>
                                 <button className="w-full py-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-gray-500 transition-colors">Selecionar</button>
                             </div>
@@ -486,7 +485,7 @@
                                 <ul className="space-y-3 text-sm text-gray-400 mb-8">
                                     <li className="flex gap-2"><Icons.Check size={16} /> Tudo do Básico</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> Relatórios Financeiros</li>
-                                    <li className="flex gap-2"><Icons.Check size={16} /> 3 Usuários</li>
+                                    <li className="flex gap-2"><Icons.Check size={16} /> 3 Barbeiros</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> WhatsApp Avançado</li>
                                 </ul>
                                 <button className="w-full py-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-gray-500 transition-colors">Selecionar</button>
@@ -499,8 +498,7 @@
                                 <ul className="space-y-3 text-sm text-gray-400 mb-8">
                                     <li className="flex gap-2"><Icons.Check size={16} /> Tudo do Pro</li>
                                     <li className="flex gap-2"><Icons.Check size={16} /> Link Personalizado com Logo</li>
-                                    <li className="flex gap-2"><Icons.Check size={16} /> Múltiplos usuários</li>
-                                    <li className="flex gap-2"><Icons.Check size={16} /> Suporte Prioritário</li>
+                                    <li className="flex gap-2"><Icons.Check size={16} /> Múltiplos Barbeiros</li>
                                 </ul>
                                 <button className="w-full py-2 border border-gray-700 rounded-lg text-gray-400 hover:text-white hover:border-gray-500 transition-colors">Selecionar</button>
                             </div>
@@ -522,7 +520,7 @@
                                 <div className="space-y-4 mb-8">
                                     <div className="flex items-center gap-3 text-gray-200">
                                         <div className="p-1 rounded-full bg-blue-500/20 text-blue-400"><Icons.Check size={14}/></div>
-                                        <span className="text-sm font-medium">Agenda Automática Ilimitada</span>
+                                        <span className="text-sm font-medium">Agendamentos Ilimitados</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-200">
                                         <div className="p-1 rounded-full bg-blue-500/20 text-blue-400"><Icons.Check size={14}/></div>
@@ -530,15 +528,11 @@
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-200">
                                         <div className="p-1 rounded-full bg-blue-500/20 text-blue-400"><Icons.Check size={14}/></div>
-                                        <span className="text-sm font-medium">Notificações WhatsApp</span>
+                                        <span className="text-sm font-medium">Finalização no WhatsApp</span>
                                     </div>
                                     <div className="flex items-center gap-3 text-gray-200">
                                         <div className="p-1 rounded-full bg-blue-500/20 text-blue-400"><Icons.Check size={14}/></div>
                                         <span className="text-sm font-medium">Gestão Financeira</span>
-                                    </div>
-                                    <div className="flex items-center gap-3 text-gray-200">
-                                        <div className="p-1 rounded-full bg-blue-500/20 text-blue-400"><Icons.Check size={14}/></div>
-                                        <span className="text-sm font-medium">Atualizações Gratuitas</span>
                                     </div>
                                 </div>
 
