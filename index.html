@@ -353,10 +353,13 @@ export default function App() {
                    <p className="text-[10px] opacity-80">Online</p>
                  </div>
                </div>
-               <div className="bg-[#0d1418] p-4 h-[400px] flex flex-col gap-4 overflow-y-auto bg-[url('https://camo.githubusercontent.com/854a93c27d64274c4f8c5a6166125c03c49c7f651b279169056f7d0c8d488e14/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131303234303838396134642e706e67')]">
+               {/* FIX: Substituída a URL quebrada/longa por um gradiente CSS limpo.
+                  bg-[radial-gradient(#1f2c34_1px,transparent_1px)] cria o efeito de "bolinhas" sutis.
+               */}
+               <div className="bg-[#0d1418] p-4 h-[400px] flex flex-col gap-4 overflow-y-auto bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:20px_20px]">
                   
                   {/* Mensagem 1 */}
-                  <div className="self-start bg-[#1f2c34] text-white p-3 rounded-lg rounded-tl-none max-w-[85%] text-sm shadow-sm relative">
+                  <div className="self-start bg-[#1f2c34] text-white p-3 rounded-lg rounded-tl-none max-w-[85%] text-sm shadow-sm relative border border-gray-800/50">
                     <p className="font-bold text-blue-400 text-xs mb-1">Novo Agendamento! ✂️</p>
                     <p>Cliente: <strong>Ricardo Silva</strong></p>
                     <p>Serviço: <strong>Corte + Barba</strong></p>
